@@ -1,0 +1,324 @@
+
+html{
+    font-size: 15px;
+    font-family: 'Barlow', sans-serif;
+}
+body{
+    margin: 0;
+    padding: 0;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+p{
+    margin: 0;
+}
+.logo{
+    position: absolute;
+    z-index: 5;
+    top:50vh;
+    left: 35vw;
+    width: 7vw;
+    height: 7vw;
+    background-color: #fa105e;
+    animation: preloader 2s;
+    animation-fill-mode: forwards;
+}
+.logo p{
+    font-size: 2rem;
+    transform: translate(-50%, -50%) rotate(-45deg);
+    margin-top: 50%;
+    margin-left: 50%;
+    
+}
+.close{
+    position: absolute;
+    cursor: pointer;
+    top: 2vw;
+    right: 2vw;
+    z-index: 4;
+    width: 4vw;
+    height: 4vw;
+    opacity: 0.5;
+}
+.close::before,
+.close::after{
+    content: '';
+    position: absolute;
+    height: 4vw;
+    width: 0.5vw;
+    background-color: rgb(133, 133, 133);
+}
+.close::before{
+    transform: rotate(45deg);
+}
+.close::after{
+    transform: rotate(-45deg);
+}
+.close:hover{
+    opacity: 1;
+}
+.bg{
+    height: 100vh;
+    width: 100%;
+    background-size: cover;
+    background-color: #4e4e4e;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-between;
+    align-content: space-between;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+.box{
+    position: absolute;
+    width: 35%;
+    height: 50%;
+}
+.box.small{
+    cursor: pointer;
+}
+ #about{
+    background-color: #eeeeee;
+    top: 0;
+    left: 0;
+}
+#skills{
+    background-color: #eeeeee;
+    bottom: 0;
+    left: 0;
+}
+#about.small,
+#skills.small{
+    transition: all 0.3s;
+}
+#about.small:hover,
+#skills.small:hover{
+    background-color: #d1d1d1;  
+}
+#about.small::before,
+#skills.small::before,
+#works.small::before{
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+}
+#about.small::before{
+    content: "O MNIE";
+    font-size: 2rem;
+}
+#skills.small::before{
+    content: "UMIEJĘTNOŚCI";
+    font-size: 2rem;
+}
+#works.small::before{
+    content: "PROJEKTY";
+    font-size: 3rem;
+    z-index: 4;
+    color: #d1d1d1;
+}
+#about.small:hover::before,
+#skills.small:hover::before,
+#works.small:hover::before{
+    opacity: 1;
+}
+#works{
+    width: 65%;
+    height: 100%;
+    right: 0;
+    overflow: hidden;
+   background-image: url("background.jpg");
+   background-size: 150%;
+   background-repeat: no-repeat;
+   background-position-y: 30%;
+}
+  .works-bg1{
+    z-index: 2;
+    background-color: rgb(0, 0, 0, 0.8);
+}
+.works-bg2{
+    z-index: 2;
+    animation: brightness 0.5s linear; 
+    animation-fill-mode: forwards;
+} 
+.active{
+    z-index: 3;
+}
+footer{
+    width: 100%;
+    position: fixed;
+    bottom: 2%;
+}
+footer h5{
+    font-size: 0.8rem;
+    margin: 0;
+}
+footer p{
+    font-size: 0.8rem;
+    text-align: center;
+    width: 65%;
+    margin: 0;
+    float: right; 
+}
+footer p, footer p a{
+    color: #d1d1d1;
+}
+.contact{
+    width: 35%;
+    float: left;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+/* ALL SECTION 100% */
+.container{
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+.container>div:first-child,
+.container>div:nth-child(2){
+    width: 40%;
+    align-self: center;
+}
+.container>div h2{
+    text-align: center;
+    white-space:nowrap;
+    font-size: 2.5rem;
+}
+
+/* SECTION WORKS */
+.portfolio{
+    position: relative;
+    left: 5%;
+    height: 80%;
+}
+#darkness .container>div:nth-child(2){
+    color: #d1d1d1;
+}
+.project-box{
+    background-size: cover;
+    box-sizing: border-box;
+    height: 30%;
+    float: left;
+    margin-bottom: 3%;
+    padding: 0.7vw;
+}
+.content{
+    position: relative;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(255, 255, 255, 0.7);
+    opacity: 0;
+    transition: all 0.2s;
+    text-align: center;
+}
+.content:hover{
+    opacity: 1;
+}
+.content img{
+    margin-top: 0.2vw;
+    width: 2vw;
+}
+.content p:first-child{
+    font-size: 1.2rem;
+}
+.links{
+    position: absolute;
+    cursor: pointer;
+    top: 75%;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+#project1{
+    background-image: url("background.jpg");
+   width: 62%;
+   margin-right: 3%;
+}
+#project2{
+    background-image: url("background.jpg");
+   width: 35%;
+}
+#project3{
+    background-image: url("background.jpg");
+    width: 100%;
+ }
+ #project4{
+    background-image: url("background.jpg");
+    width: 35%;
+    margin-right: 3%;
+ }
+ #project5{
+    background-image: url("background.jpg");
+    width: 62%;
+ }
+
+ .inactive{
+    display: none;
+}
+
+
+ /* MEDIA QUERIES */
+ @media (max-width: 990px){
+    html{ font-size: 8px;}
+    .box{ width: 50%;}
+    #works{ width: 50%;}
+    .logo{ left: 50vw;}
+    .contact, footer p{ width: 50%;}
+    #about.small::before,
+    #skills.small::before,
+    #works.small::before{ opacity: 1;}
+    #skills.small::before{ font-size: 2rem;}
+    footer h5, footer p{ font-size: 1.2rem;}
+    .container h2{ font-size: 20px;}
+    .container p{ font-size: 15px;}
+    .portfolio{ left: 5%; width: 40%; overflow: auto;}
+    .project-box{ position: static; margin-bottom: 2%;}
+    #project1, #project2, #project3, #project4, #project5{ width: 80%; height: 80%; }
+    .content{ padding-top: 10%;}
+    .content p:first-child{ font-size: 2rem;}
+}
+@media (orientation: portrait) and (max-width: 990px){
+    #skills{ top: 0; right: 0; bottom: auto; left: auto;}
+    #works{ right: 0; bottom: 0; width: 100%; height: 50%;}
+    .close{ width: 7vw; height: 7vw;}
+    .close::before, .close::after{ height: 7vw;}
+    .logo{ width: 10vw; height: 10vw;}
+    .container{ flex-direction: column; justify-content: center;}
+    .container>div:first-child, .container>div:nth-child(2) {width: 80%;}
+    .container>div{ width: 100%;}
+    .container div:first-child{ order: 2;}
+    .portfolio{ left: auto; height: 100%;}
+    #project1, #project2, #project3, #project4, #project5{ width: 100%; height: 50%; }
+    .project-box{ padding: 3vw;}
+    .links .fa-2x{ font-size: 4rem;}
+    .content img{ width: 10vw;}
+}
+@media (min-width: 700px) and (max-width: 990px){
+    html{ font-size: 15px;}
+    .container p{ font-size: 1.5rem;}
+}
+@media (min-width: 1600px){
+    .logo p{ font-size: 3rem;}
+    .close{ width: 3vw; height: 3vw;}
+    .close::before, .close::after{ height: 3vw;}
+    .container>div p{ font-size: 2rem;}
+    .content p:first-child{ font-size: 1.5rem;}
+    .content p:nth-child(2){ font-size: 1rem;}
+    .content img{ margin-top: 0.5vw;}
+    #about.small::before, #skills.small::before{ font-size: 3rem;}
+}
+ /* ANIMACJE */
+ @keyframes brightness{
+    0% {background-color: rgb(0, 0, 0, 0.8);}
+    100% {background-color: rgb(0, 0, 0, 1);}
+ }
+ @keyframes preloader {
+	0% {transform: translate(-50%, -50%) rotate(-315deg);}
+    100% {transform: translate(-50%, -50%) rotate(45deg);}
+}
